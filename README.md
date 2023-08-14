@@ -1,2 +1,0 @@
-# SWEProjects
-Software Engineering Projects
