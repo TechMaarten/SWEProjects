@@ -1,2 +1,2 @@
 # SWEProjects
-Written in Python. A connect four game with and AI player.
+Written in Python. Simulated a connect four game with a grid and letters. Created an AI player to play against the user.
