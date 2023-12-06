@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+#projhome {
+    position: relative;
+}
+#projhome::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(src/fruit.jpg);
+    opacity: 0.2;
+}
+#hide {
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+}
+#hide nav ul {
+    margin: 10vh 0;
+}
+#hide img {
+    margin: 7%;
+}
+header {
+    background-color: rgb(176, 87, 141);
+    color: #F5FCCD;
+    padding-left: 1%;
+    padding-bottom: 1.5%;
+    padding-top: .5%;
+    text-align: center;
+    isolation: isolate;
+}
+header img, header h1{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 10%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 1.5%;
+}
+body {
+
+    text-align: center;
+}
+nav {
+    width: 30%;
+    text-align: center;
+    padding: 0 3%;
+    isolation: isolate;
+}
+nav ul {
+    list-style: none;
+    margin: 4vh 0;
+}
+nav li {
+    border: 2px solid black;
+    background-color: rgb(176, 87, 141);
+    margin: 0 1vw;
+    padding: 3vh 2vw;
+    font-size: calc(1px + 1vw);
+}
+nav a {
+    text-decoration: none;
+    color: #F5FCCD;
+    font-size: large;
+}
+main {
+    color: black;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    isolation: isolate;
+}
+main p {
+    color: #F5FCCD;
+    padding: 2%;
+    margin: 5%;
+    font-size: larger;
+    border: 2px solid black;
+    background-color: rgb(176, 87, 141);
+}
+main a {
+    color: black;
+}
+footer {
+    margin: 1vh 0;
+    padding: 1%;
+    background-color: rgb(176, 87, 141);
+    color: #F5FCCD;
+    isolation: isolate;
+}
+footer a {
+    color: #F5FCCD;
+}
+@media screen and (max-width: 750px) {
+    #hide {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+    }
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    nav li {
+        display: inline;
+        margin: 0 1vw;
+        padding: .3vh .5vw;
+    }
+    nav a {
+        font-size: calc(1px + .4vw);
+    }
+    header {
+        text-align: center;
+    }
+    #hide nav ul {
+        margin: 4vh 0;
+    }
+    #hide img {
+        margin: 4%;
+    }
+}
