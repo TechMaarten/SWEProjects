@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+#proj2 {
+    position: relative;
+}
+#proj2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(src/fruit.jpg);
+    opacity: 0.2;
+}
+#close {
+    display: flex;
+    flex-direction: row;
+}
+.accordion {
+    margin: 6vh;
+    width: 60vw;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin: 2vh;
+    padding: 1vh;
+    border-radius: 1vh;
+    background: rgb(176, 87, 141);
+    box-shadow: 1vh 1vh 1.7vh -0.1vh rgba(0, 0, 0, 0.15),
+    -1vh -1vh 1.7vh -0.1vh rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label {
+    color: #F5FCCD;
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+    font-size: 3vh;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before {
+    content: '+';
+    margin-right: 1vh;
+    font-size: 2.4vh;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    color: #F5FCCD;
+    padding: 0 1vh;
+    line-height: 2.6vh;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion .content p {
+    font-size: 2.5vh;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 40vh;
+    padding: 1vh 1vh 2vh;
+}
+
+.accordion input[type="radio"]:checked + label::before {
+    content: "-";
+}
+
+.content img {
+    max-width: 100%;
+}
+header {
+    isolation: isolate;
+    background-color: rgb(176, 87, 141);
+    color: #F5FCCD;
+    padding-left: 1%;
+    padding-bottom: 1.5%;
+    padding-top: .5%;
+    text-align: center;
+}
+body {
+    text-align: center;
+}
+nav {
+    isolation: isolate;
+    width: 30%;
+    text-align: center;
+    padding: 0 3%;
+}
+nav ul {
+    list-style: none;
+    margin: 7vh 0;
+}
+nav li {
+    border: 2px solid black;
+    background-color: rgb(176, 87, 141);
+    margin: 0 1vw;
+    padding: 3vh 2vw;
+    font-size: calc(1px + 1vw);
+}
+nav a {
+    text-decoration: none;
+    color: #F5FCCD;
+    font-size: large;
+}
+main {
+    isolation: isolate;
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer {
+    isolation: isolate;
+    margin: 0;
+    padding: 1%;
+    background-color: rgb(176, 87, 141);
+    color: #F5FCCD;
+}
+footer a {
+    color: #F5FCCD;
+}
+@media screen and (max-width: 750px) {
+    #close {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li {
+        display: inline;
+        margin: 0 1vw;
+        padding: 1vh 1vw;
+    }
+
+    nav a {
+        font-size: calc(1px + .4vw);
+    }
+}
